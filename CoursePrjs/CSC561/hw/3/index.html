@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3D</title>
+			 <script type="text/javascript" src="./render.js"></script>
+				<script type="text/javascript" src="./datadef.js"></script>
+    <script type="text/javascript" src="./gl-matrix-min.js"></script>
+				<script type="text/javascript" src="./minMatrix.js"></script>
+</head>
+
+<div>
+ <tr>
+ <div><th width=120px>window width：</th>
+ 		<th><input name="camera_w" id = "camera_w"type="text" style ="width:40px"></th><th>height:</th><th><input name="camera_h" id= "camera_h"type="text" style ="width:40px"></th>
+        <th><input name="camera_size_set" value = "set"type="button" onclick="sizechanged()"></th>
+  <th>   homework select：</th>
+  <th><input name="goto" type="radio" value="hwsel" id = "gotopart1" checked="checked"  onclick="gotopart1()">part1</th>
+  <th><input name="goto" type="radio" value="hwsel" onclick="gotopart2()">part2</th>
+  <th><input name="goto" type="radio" value="hwsel" onclick="gotopart3()">part3</th>
+     <th><input name="goto" type="radio" value="hwsel" onclick="gotopart4()">part4</th>
+  </div>
+  </tr>
+  </table>
+
+  <table>
+ <tr>
+    <div>
+    <th>light location x：</th><th><input id = "light_x" name="light_x" type="text" style ="width:40px"></th><th>y:</th><th><input name="light_y" id = "light_y" type="text" style ="width:40px"></th><th>z:</th><th><input name="light_z" id = "light_z" type="text" style ="width:40px"></th><th><input name="addlight" value = "addlight"type="button"  onclick="addlight()"></th><th><input name="dellastlight" value = "remove last added light"type="button"  onclick="deletelight()"></th>
+    </div>
+
+ </tr>
+</table>
+
+    <table>
+        <tr>
+            <div>
+                <th><input type = "checkbox" id ="enable_lights" name = "enable_lights" onclick="enablelights()"> enable lights </th><th>
+            </div>
+            <div>
+                <th><input type = "checkbox" id ="enable_alpha_t" name = "enable_alpha_t" onclick="enabletexturelalpha()"> enable texture alpha </th><th>
+            </div>
+            <div>
+                <th><input type = "checkbox" id ="enable_alpha_g" name = "enable_alpha_g" onclick="enableglobalalpha()"> enable alpha </th><th><input name="alpha_g" type="range" value="hwsel" id = "alpha_g" max = "1.0" min = "0.0" step = "0.05" defaultValue = "0.5" onmouseup="changedalpha()" style="visibility:hidden" disabled></th>
+            </div>
+        </tr>
+        </table>
+</div>
+
+<body onload="setupAll();">
+<canvas id="viewport" width="512" height="512" style="position: fixed;top:120px;"></canvas>
+<canvas id="myImageCanvas" width="512" height="512" ></canvas>
+</body>
+</html>

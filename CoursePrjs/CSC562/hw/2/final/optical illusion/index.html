@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>optical illusion</title>
+			 <script type="text/javascript" src="./render.js"></script>
+				<script type="text/javascript" src="./datadef.js"></script>
+    <script type="text/javascript" src="./gl-matrix-min.js"></script>
+				<script type="text/javascript" src="./minMatrix.js"></script>
+</head>
+
+<div>
+    <table>
+        <tr>
+            <div>
+                <th><input type = "button" id ="reset" name = "reset" onclick="reset()">reset</th>
+            </div>
+            <div>
+                <th><input type = "checkbox" id ="enable_surround" name = "enable_surround" onclick="enable_surround()" checked="checked"> show surroundings </th><th>
+            </div>
+            <div>
+                <th><input type = "checkbox" id ="enable_move" name = "enable_move" onclick="enable_move()" >move</th><th>
+            </div>
+            <div>
+                <th><input type = "checkbox" id ="enable_alpha_g" name = "enable_alpha_g" onclick="enableglobalalpha()" checked="checked">alpha</th>
+            </div>
+        </tr>
+    </table>
+</div>
+
+<body onload="setupAll();">
+<canvas id="viewport" width="512" height="512" style="position: fixed;top:120px;"></canvas>
+<canvas id="myImageCanvas" width="512" height="512" ></canvas>
+</body>
+</html>

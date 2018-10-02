@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3D</title>
+			 <script type="text/javascript" src="./render.js"></script>
+				<script type="text/javascript" src="./datadef.js"></script>
+    <script type="text/javascript" src="./gl-matrix-min.js"></script>
+				<script type="text/javascript" src="./minMatrix.js"></script>
+</head>
+
+<div>
+ <tr>
+ <div>
+  <th>   homework select：</th>
+  <th><input name="goto" type="radio" value="hwsel" id = "gotopart1" checked="checked"  onclick="gotopart1()">part1&2</th>
+  <th><input name="goto" type="radio" value="hwsel" onclick="gotopart3()">part3</th>
+     <th><input name="goto" type="radio" value="hwsel" onclick="gotopart4()">part4</th>
+  </div>
+  </tr>
+  </table>
+  <table>
+</table>
+
+    <table>
+        <tr>
+            <div>
+                <th><input type = "checkbox" id ="enable_lights" name = "enable_lights" onclick="enablelights()"> enable lights </th><th>
+            </div>
+        </tr>
+        </table>
+</div>
+<div id="timedv">triangles number:0 frame time:0 ms</div>
+<body onload="setupAll();">
+<canvas id="viewport" width="512" height="512" style="position: fixed;top:120px;"></canvas>
+</body>
+</html>
