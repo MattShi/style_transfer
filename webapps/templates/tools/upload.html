@@ -1,0 +1,12 @@
+<br>
+    "Hello, world. You're at the polls index."
+</br>
+
+<form method="POST" enctype="multipart/form-data"
+      action="./../show">
+    {% csrf_token %}
+    <input type="file" name="img">
+    <button type="submit">Upload</button>
+</form>
+
+<button type="submit">Trans</button>
